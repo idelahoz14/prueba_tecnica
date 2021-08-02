@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+        <title>Prueba Tecnica</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='get_user.css') }}">
+    </head>
+    <body>
+        <header>
+            <h1 class="title">Prueba Tecnica</h1>
+        </header>
+        <div class="section-form">
+            <h2 class="title-form">Form Users</h2>
+            <form action="/add_user" method="POST">
+                <label for="firstName">First Name: </label>
+                <input type="text" name="firstName" placeholder="First Name" value="{{ user.1 }}" >
+                <label for="middleName">Middle Name: </label>
+                <input type="text" name="middleName" placeholder="Middle Name" value="{{ user.2 }}" >
+                <label for="lastName">Last Name: </label>
+                <input type="text" name="lastName" placeholder="Last Name" value="{{ user.3 }}" >
+                <label for="email">Email: </label>
+                <input type="text" name="email" placeholder="Email" value="{{ user.4 }}" >
+                <label for="zip-code">Zip Code: </label>
+                <input type="text" name="zipCode" placeholder="Zip Code" value="{{ user.5 }}" >
+                <a href="/" id="close">Close</a>
+            </form>
+        </div>
+        <footer>
+            <p class="footer-information"> App web developed by <a href="https://www.linkedin.com/in/isaacdelahoz/">Isaac De La Hoz</a> </p>
+        </footer>
+    </body>
+</html>

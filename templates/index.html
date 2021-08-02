@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+        <title>Prueba Tecnica</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <header>
+            <h1 class="title">Prueba Tecnica</h1>
+            <!-- Capturing message -->
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            {% for message in messages %}
+                <p> {{ message }} </p>
+            {% endfor %}
+            {% endif %}
+            {% endwith %}
+        </header>
+        <div class="section-form">
+            <h2 class="title-form">Form Users</h2>
+            <form action="/add_user" method="POST">
+                <label for="firstName">First Name: </label>
+                <input type="text" name="firstName" placeholder="First Name" required >
+                <label for="middleName">Middle Name: </label>
+                <input type="text" name="middleName" placeholder="Middle Name">
+                <label for="lastName">Last Name: </label>
+                <input type="text" name="lastName" placeholder="Last Name" required >
+                <label for="email">Email: </label>
+                <input type="text" name="email" placeholder="Email" required >
+                <label for="zip-code">Zip Code: </label>
+                <input type="text" name="zipCode" placeholder="Zip Code" required >
+                <input type="submit" value="Send">
+            </form>
+        </div>
+        <div class="section-table">
+            <h2 class="title-table">Information Users</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <td>Id</td>
+                        <td>Full Name</td>
+                        <td>Middle Name</td>
+                        <td>Last Name</td>
+                        <td>Email</td>
+                        <td>Zip Code</td>
+                        <td>Operations</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for user in users %}
+                        <tr>
+                            <td>{{ user.0 }}</td>
+                            <td>{{ user.1 }}</td>
+                            <td>{{ user.2 }}</td>
+                            <td>{{ user.3 }}</td>
+                            <td>{{ user.4 }}</td>
+                            <td>{{ user.5 }}</td>
+                            <td>
+                                <a href="/edit_user/{{ user.0 }}">Edit</a>
+                                <a href="/delete_user/{{ user.0 }}">Delete</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <footer>
+            <p class="footer-information"> App web developed by <a href="https://www.linkedin.com/in/isaacdelahoz/">Isaac De La Hoz</a> </p>
+        </footer>
+    </body>
+</html>

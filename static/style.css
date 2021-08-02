@@ -1,0 +1,120 @@
+html {
+    font-family: sans-serif;
+}
+
+  
+body {
+    max-width: auto;
+    margin: 0;
+}
+
+header {
+    width: auto;
+    height: 5rem;
+    background-color: #90afc5;
+}
+
+header .title {
+    margin: 0;
+    text-align: center;
+    padding: 1rem;
+    color: aliceblue;
+}
+
+.section-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 26.1rem;
+    width: 35rem;
+    margin: 3rem 0 3rem 3rem;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+}
+
+.section-form .title-form {
+    color: #2a3132;
+}
+
+form {
+    color: #2a3132;
+}
+
+input[type=text], select {
+    width: 95%;
+    padding: 6px 10px;
+    margin: 8px 0 0 10px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 90%;
+    background-color: #2a3132;
+    color: white;
+    padding: 8px 20px;
+    margin: 25px 0 0 25px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    transition: 0.5s;
+    background-color: #336b87;
+}
+
+label {
+    margin: 0 0 0 12px;
+}
+
+.section-table {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 26.1rem;
+    width: 35rem;
+    margin: -29.1rem 0 3rem 40rem;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #ddd;
+    font-size: 12px;
+}
+
+thead {
+    background-color: #90afc5;
+    font-size: 14px;
+}
+
+p {
+    text-align: center;
+}
+
+footer {
+    width: auto;
+    height: 3rem;
+    color: aliceblue;
+    background-color: #336b87;
+}
+
+footer .footer-information {
+    font-weight: 700;
+    font-size: 12px;
+    text-align: center;
+    padding-top: 15px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #2a3132;
+}
